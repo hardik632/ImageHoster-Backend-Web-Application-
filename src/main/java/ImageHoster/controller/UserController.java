@@ -35,9 +35,7 @@ public class UserController {
         user.setProfile(profile);
         model.addAttribute("User", user);
 
-   
         return "users/registration";
-
     }
 
     //This controller method is called when the request pattern is of type 'users/registration' and also the incoming request is of POST type
@@ -45,6 +43,9 @@ public class UserController {
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
     public String registerUser(User user) {
         userService.registerUser(user);
+
+        return "redirect:/login";
+
 
         return "redirect:/users/login";
 
@@ -55,6 +56,7 @@ public class UserController {
     public String login() {
 
         return "users/login";
+
     }
 
     //This controller method is called when the request pattern is of type 'users/login' and also the incoming request is of POST type
