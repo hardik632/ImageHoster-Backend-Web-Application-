@@ -17,7 +17,19 @@ public class UserRepository {
     //Starts a transaction
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
+    public void registerUser(User newUser) {
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction transaction = em.getTransaction();
 
+        try {
+            transaction.begin();
+            //persist() method changes the state of the model object from transient state to persistence state
+            em.persist(newUser);
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+        }
+    }
 
 
     //The method receives the entered username and password
