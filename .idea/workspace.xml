@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/config/JpaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" afterDir="false" />
@@ -71,10 +72,10 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-<<<<<<< HEAD
+    HEAD
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-=======
->>>>>>> da39f519600ced2c3d72b8cc3f7163ad5bfe8297
+    =======
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; da39f519600ced2c3d72b8cc3f7163ad5bfe8297
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540386387068" />
@@ -88,7 +89,7 @@
   <component name="RunManager" selected="Application.ImageHosterApplication">
     <configuration name="ImageHosterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ImageHoster.ImageHosterApplication" />
-      <module name="ImageHoster WebApplication" />
+      <module name="ImageHoster-Backend-Web-Application-" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ImageHoster.*" />
@@ -147,6 +148,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="360" y="3" key="#ImageHosterApplication" timestamp="1587532494582">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="360" y="3" key="#ImageHosterApplication/0.0.1280.689@0.0.1280.689" timestamp="1587532494582" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1587484171549">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
