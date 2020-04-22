@@ -25,14 +25,11 @@ public class UserService {
     //Else returns null
     public User login(User user) {
         User existingUser = userRepository.checkUser(user.getUsername(), user.getPassword());
-        if(existingUser!=null)
-        {
-         return existingUser;
-        }
-        else
-        {
+
+        if(existingUser==null)
             return null;
-        }
+        else
+            return existingUser;
     }
 
 }
