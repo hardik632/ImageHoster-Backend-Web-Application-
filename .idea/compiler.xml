@@ -9,6 +9,7 @@
         <module name="ImageHoster-Backend-Web-Application-" />
         <module name="ImageHoster" />
         <module name="ImageHoster WebApplication" />
+        <module name="ImageHoster" />
       </profile>
     </annotationProcessing>
   </component>
