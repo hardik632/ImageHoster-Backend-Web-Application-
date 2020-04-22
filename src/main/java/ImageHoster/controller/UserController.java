@@ -34,6 +34,7 @@ public class UserController {
         UserProfile profile = new UserProfile();
         user.setProfile(profile);
         model.addAttribute("User", user);
+        return "user/registration";
     }
 
     //This controller method is called when the request pattern is of type 'users/registration' and also the incoming request is of POST type
@@ -41,11 +42,13 @@ public class UserController {
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
     public String registerUser(User user) {
         userService.registerUser(user);
+        return "redirect:/login";
     }
 
     //This controller method is called when the request pattern is of type 'users/login'
     @RequestMapping("users/login")
     public String login() {
+        return "user/login";
     }
 
     //This controller method is called when the request pattern is of type 'users/login' and also the incoming request is of POST type
@@ -55,6 +58,15 @@ public class UserController {
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
     public String loginUser(User user, HttpSession session) {
         User existingUser = userService.login(user);
+        if(existingUser)
+        {
+            return "redirect:/index";
+        }
+        else
+        {
+            return "user/login";
+        }
+
     }
 
     //This controller method is called when the request pattern is of type 'users/logout' and also the incoming request is of POST type
@@ -68,5 +80,6 @@ public class UserController {
 
         List<Image> images = imageService.getAllImages();
         model.addAttribute("images", images);
+        return "index";
     }
 }
