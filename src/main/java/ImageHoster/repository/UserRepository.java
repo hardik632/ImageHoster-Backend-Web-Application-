@@ -21,13 +21,13 @@ public class UserRepository {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-//        try {
-//            transaction.begin();
-//            //persist() method changes the state of the model object from transient state to persistence state
-//            em.persist(newUser);
-//            transaction.commit();
-//        } catch (Exception e) {
-//            transaction.rollback();
+        try {
+            transaction.begin();
+            //persist() method changes the state of the model object from transient state to persistence state
+            em.persist(newUser);
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
         }
     }
 

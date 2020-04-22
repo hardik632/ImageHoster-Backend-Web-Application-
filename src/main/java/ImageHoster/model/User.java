@@ -42,5 +42,7 @@ public class User {
     private List<Image> images = new ArrayList<>();
 
 
+    public void setProfile(UserProfile profile) {
+    }
 }
 
