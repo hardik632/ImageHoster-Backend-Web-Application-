@@ -7,11 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ImageHoster-Backend-Web-Application-" />
-<<<<<<< HEAD
-=======
+        HEAD
         <module name="ImageHoster" />
         <module name="ImageHoster WebApplication" />
->>>>>>> 6ffde1ba94de108994ec60a9463a192155ea1faf
         <module name="ImageHoster" />
         <module name="ImageHoster WebApplication" />
       </profile>
