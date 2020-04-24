@@ -14,22 +14,29 @@ public class TagRepository {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try {
+        try
+        {
             transaction.begin();
             em.persist(tag);
             transaction.commit();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             transaction.rollback();
         }
         return tag;
     }
 
-    public Tag findTag(String tagName) {
+    public Tag findTag(String tagName)
+    {
         EntityManager em = emf.createEntityManager();
-        try {
+        try
+        {
             TypedQuery<Tag> typedQuery = em.createQuery("SELECT t from Tag t where t.name =:tagName", Tag.class).setParameter("tagName", tagName);
             return typedQuery.getSingleResult();
-        } catch (NoResultException nre) {
+        }
+        catch (NoResultException nre)
+        {
             return null;
         }
     }

@@ -34,25 +34,23 @@ public class UserController {
         UserProfile profile = new UserProfile();
         user.setProfile(profile);
         model.addAttribute("User", user);
-
         return "users/registration";
     }
 
     //This controller method is called when the request pattern is of type 'users/registration' and also the incoming request is of POST type
     //This method calls the business logic and after the user record is persisted in the database, directs to login page
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
-    public String registerUser(User user) {
+    public String registerUser(User user)
+    {
         userService.registerUser(user);
         return "redirect:/users/login";
-
     }
 
     //This controller method is called when the request pattern is of type 'users/login'
     @RequestMapping("users/login")
-    public String login() {
-
+    public String login()
+    {
         return "users/login";
-
     }
 
     //This controller method is called when the request pattern is of type 'users/login' and also the incoming request is of POST type
@@ -60,14 +58,19 @@ public class UserController {
     //If user with entered username and password exists in the database, add the logged in user in the Http Session and direct to user homepage displaying all the images in the application
     //If user with entered username and password does not exist in the database, redirect to the same login page
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
-    public String loginUser(User user, HttpSession session) {
+    public String loginUser(User user, HttpSession session)
+    {
         User existingUser = userService.login(user);
-        if (existingUser == null) {
+        if (existingUser == null)
+        {
             return "users/login";
-        } else {
+        }
+       else
+        {
             session.setAttribute("loggeduser", existingUser);
             return "redirect:/images";
         }
+
     }
 
     //This controller method is called when the request pattern is of type 'users/logout' and also the incoming request is of POST type
@@ -81,7 +84,6 @@ public class UserController {
 
         List<Image> images = imageService.getAllImages();
         model.addAttribute("images", images);
-
         return "index";
     }
 }

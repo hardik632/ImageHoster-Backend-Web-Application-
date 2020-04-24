@@ -21,12 +21,15 @@ public class UserRepository {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try {
+        try
+        {
             transaction.begin();
             //persist() method changes the state of the model object from transient state to persistence state
             em.persist(newUser);
             transaction.commit();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             transaction.rollback();
         }
     }
@@ -38,16 +41,17 @@ public class UserRepository {
     //Returns the fetched user
     //Returns null in case of NoResultException
     public User checkUser(String username, String password) {
-        try {
+        try
+        {
             EntityManager em = emf.createEntityManager();
             TypedQuery<User> typedQuery = em.createQuery("SELECT u FROM User u WHERE u.username = :username AND u.password = :password", User.class);
             typedQuery.setParameter("username", username);
             typedQuery.setParameter("password", password);
-
             return typedQuery.getSingleResult();
-        } catch (NoResultException nre) {
+        }
+        catch (NoResultException nre)
+        {
             return null;
         }
     }
-
 }

@@ -30,8 +30,12 @@ public class Tag {
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tags")
     private List<Image> images;
 
-    public Tag(String tagName) {
-        this.name=tagName;
+    public Tag() {
+    }
+
+    public Tag(String tagName)
+    {
+        this.name = tagName;
     }
 
     public Integer getId() {

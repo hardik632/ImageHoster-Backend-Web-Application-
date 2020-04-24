@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
@@ -35,7 +36,7 @@ public class ImageController {
     }
 
     //This method is called when the details of the specific image with corresponding title are to be displayed
-    //The logic is to get the image from the database with corresponding title. After getting the image from the database the details are shown
+    //The logic is to get the image from the databse with corresponding title. After getting the image from the database the details are shown
     //First receive the dynamic parameter in the incoming request URL in a string variable 'title' and also the Model type object
     //Call the getImageByTitle() method in the business logic to fetch all the details of that image
     //Add the image in the Model type object with 'image' as the key
@@ -118,6 +119,14 @@ public class ImageController {
         String updatedImageData = convertUploadedFileToBase64(file);
         List<Tag> imageTags = findOrCreateTags(tags);
 
+        if (!updatedImageData.isEmpty()) {
+            updatedImage.setImageFile(updatedImageData);
+        }
+
+        else {
+            updatedImage.setImageFile(image.getImageFile());
+        }
+
         updatedImage.setId(imageId);
         User user = (User) session.getAttribute("loggeduser");
         updatedImage.setUser(user);
@@ -126,9 +135,7 @@ public class ImageController {
 
         imageService.updateImage(updatedImage);
         return "redirect:/images/" + updatedImage.getTitle();
-
     }
-
 
     //This controller method is called when the request pattern is of type 'deleteImage' and also the incoming request is of DELETE type
     //The method calls the deleteImage() method in the business logic passing the id of the image to be deleted
@@ -137,7 +144,6 @@ public class ImageController {
 //    public String deleteImageSubmit(@RequestParam(name = "imageId") Integer imageId) {
 //        imageService.deleteImage(imageId);
 //        return "redirect:/images";
-//
 //    }
 
 
@@ -175,7 +181,7 @@ public class ImageController {
 
         Tag lastTag = tags.get(tags.size() - 1);
         tagString.append(lastTag.getName());
-        return tagString.toString();
 
-   }
+        return tagString.toString();
+    }
 }

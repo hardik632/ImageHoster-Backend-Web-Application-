@@ -2,15 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/config/JpaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/TagRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/config/JpaConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/config/JpaConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/model/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/Tag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/repository/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/ImageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/repository/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/TagRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/ImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/service/TagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/TagService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/images/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/images/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images/image.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/images/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,9 +94,6 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -148,10 +171,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="360" y="3" key="#ImageHosterApplication/0.0.1280.689@0.0.1280.689" timestamp="1587532494582" />
-    <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser" timestamp="1587575226548">
+    <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser" timestamp="1587716993906">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1587575226548" />
+    <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1587716993906" />
     <state x="269" y="6" key="CommitChangelistDialog2" timestamp="1587536522708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -161,22 +184,22 @@
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1587540413689" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587535381972" />
-    <state width="1237" height="220" key="GridCell.Tab.0.bottom" timestamp="1587620702561">
+    <state width="1237" height="203" key="GridCell.Tab.0.bottom" timestamp="1587743974225">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587620702561" />
-    <state width="1237" height="220" key="GridCell.Tab.0.center" timestamp="1587620702560">
+    <state width="1237" height="203" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587743974225" />
+    <state width="1237" height="203" key="GridCell.Tab.0.center" timestamp="1587743974225">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587620702560" />
-    <state width="1237" height="220" key="GridCell.Tab.0.left" timestamp="1587620702559">
+    <state width="1237" height="203" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587743974225" />
+    <state width="1237" height="203" key="GridCell.Tab.0.left" timestamp="1587743974221">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587620702559" />
-    <state width="1237" height="220" key="GridCell.Tab.0.right" timestamp="1587620702560">
+    <state width="1237" height="203" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587743974221" />
+    <state width="1237" height="203" key="GridCell.Tab.0.right" timestamp="1587743974225">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="220" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587620702560" />
+    <state width="1237" height="203" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587743974225" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1587484171549">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

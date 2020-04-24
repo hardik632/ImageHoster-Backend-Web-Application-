@@ -2,8 +2,10 @@ package ImageHoster.repository;
 
 import ImageHoster.model.Image;
 import org.springframework.stereotype.Repository;
-import java.util.List;
+
 import javax.persistence.*;
+import java.util.List;
+
 //The annotation is a special type of @Component annotation which describes that the class defines a data repository
 @Repository
 public class ImageRepository {
@@ -12,26 +14,25 @@ public class ImageRepository {
     @PersistenceUnit(unitName = "imageHoster")
     private EntityManagerFactory emf;
 
+
     //The method receives the Image object to be persisted in the database
     //Creates an instance of EntityManager
     //Starts a transaction
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
-    public void uploadImage(Image newImage) {
+    public Image uploadImage(Image newImage) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try
-        {
+        try {
             transaction.begin();
             em.persist(newImage);
             transaction.commit();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             transaction.rollback();
         }
+        return newImage;
     }
 
     //The method creates an instance of EntityManager
@@ -41,6 +42,7 @@ public class ImageRepository {
         EntityManager em = emf.createEntityManager();
         TypedQuery<Image> query = em.createQuery("SELECT i from Image i", Image.class);
         List<Image> resultList = query.getResultList();
+
         return resultList;
     }
 
@@ -50,13 +52,10 @@ public class ImageRepository {
     //Returns null if no image is found in the database
     public Image getImageByTitle(String title) {
         EntityManager em = emf.createEntityManager();
-        try
-        {
+        try {
             TypedQuery<Image> typedQuery = em.createQuery("SELECT i from Image i where i.title =:title", Image.class).setParameter("title", title);
             return typedQuery.getSingleResult();
-        }
-        catch (NoResultException nre)
-        {
+        } catch (NoResultException nre) {
             return null;
         }
     }
@@ -80,13 +79,11 @@ public class ImageRepository {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try
-        {
+        try {
             transaction.begin();
             em.merge(updatedImage);
             transaction.commit();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             transaction.rollback();
         }
     }

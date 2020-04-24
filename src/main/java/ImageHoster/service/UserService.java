@@ -12,7 +12,8 @@ public class UserService {
     private UserRepository userRepository;
 
     //Call the registerUser() method in the UserRepository class to persist the user record in the database
-    public void registerUser(User newUser) {
+    public void registerUser(User newUser)
+    {
         userRepository.registerUser(newUser);
     }
 
@@ -25,11 +26,14 @@ public class UserService {
     //Else returns null
     public User login(User user) {
         User existingUser = userRepository.checkUser(user.getUsername(), user.getPassword());
-
         if(existingUser==null)
+        {
             return null;
+        }
         else
+        {
             return existingUser;
+        }
     }
 
 }
