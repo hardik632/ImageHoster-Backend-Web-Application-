@@ -145,8 +145,6 @@ public class ImageController {
         imageService.deleteImage(imageId);
         return "redirect:/images";
     }
-
-
     //This method converts the image to Base64 format
     private String convertUploadedFileToBase64(MultipartFile file) throws IOException {
         return Base64.getEncoder().encodeToString(file.getBytes());
