@@ -99,18 +99,18 @@ public class ImageRepository {
     //If you use remove() method on the object which is not in persistent state, an exception is thrown
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
-    public void deleteImage(Integer imageId) {
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction transaction = em.getTransaction();
-
-        try {
-            transaction.begin();
-            Image image = em.find(Image.class, imageId);
-            em.remove(image);
-            transaction.commit();
-        } catch (Exception e) {
-            transaction.rollback();
-        }
-    }
+//    public void deleteImage(Integer imageId) {
+//        EntityManager em = emf.createEntityManager();
+//        EntityTransaction transaction = em.getTransaction();
+//
+//        try {
+//            transaction.begin();
+//            Image image = em.find(Image.class, imageId);
+//            em.remove(image);
+//            transaction.commit();
+//        } catch (Exception e) {
+//            transaction.rollback();
+//        }
+//    }
 
 }

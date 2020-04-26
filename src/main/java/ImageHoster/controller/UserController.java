@@ -44,9 +44,6 @@ public class UserController {
     public String registerUser(User user) {
         userService.registerUser(user);
 
-        return "redirect:/login";
-
-
         return "redirect:/users/login";
 
     }
@@ -66,7 +63,12 @@ public class UserController {
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
     public String loginUser(User user, HttpSession session) {
         User existingUser = userService.login(user);
-        return "redirect:users/login";
+        if (existingUser != null) {
+            session.setAttribute("loggeduser", existingUser);
+            return "redirect:/images";
+        } else {
+            return "users/login";
+        }
     }
 
     //This controller method is called when the request pattern is of type 'users/logout' and also the incoming request is of POST type

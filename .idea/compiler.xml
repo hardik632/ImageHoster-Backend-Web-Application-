@@ -9,12 +9,12 @@
         <module name="ImageHoster-Backend-Web-Application-" />
         <module name="ImageHoster" />
         <module name="ImageHoster WebApplication" />
-        <module name="ImageHoster" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ImageHoster" options="-parameters" />
       <module name="ImageHoster WebApplication" options="-parameters" />
       <module name="ImageHoster-Backend-Web-Application-" options="-parameters" />
     </option>
