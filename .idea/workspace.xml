@@ -71,7 +71,7 @@
   <component name="RunManager" selected="Application.ImageHosterApplication">
     <configuration name="ImageHosterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ImageHoster.ImageHosterApplication" />
-      <module name="ImageHoster-Backend-Web-Application-" />
+      <module name="ImageHoster" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ImageHoster.*" />
@@ -130,10 +130,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="3" key="#ImageHosterApplication" timestamp="1587532494582">
+    <state x="360" y="3" key="#ImageHosterApplication" timestamp="1587883589503">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="360" y="3" key="#ImageHosterApplication/0.0.1280.689@0.0.1280.689" timestamp="1587532494582" />
+    <state x="360" y="3" key="#ImageHosterApplication/0.0.1280.689@0.0.1280.689" timestamp="1587883589503" />
     <state x="446" y="29" key="#com.intellij.ide.util.MemberChooser" timestamp="1587716993906">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
