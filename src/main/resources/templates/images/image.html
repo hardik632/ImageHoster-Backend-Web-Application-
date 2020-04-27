@@ -20,11 +20,11 @@
     <div><i>Description: </i> <span th:text="${image.description}"></span></div>
 
 <!--     Code to display all  the tags of an image. ${tags} refers to a tags attribute in Model type object-->
-    <div>Tags:-
-        <header th:each="tag : ${tags}">
-            <span th:text="${tag.name}">Tag name</span>
-        </header>
-    </div>
+<!--    <div>Tags:- -->
+<!--        <header th:each="tag : ${tags}">-->
+<!--            <span th:text="${tag.name}">Tag name</span>-->
+<!--        </header>-->
+<!--    </div>-->
 
     <div>
         <a th:href="@{/editImage(imageId=${image.id})}">Edit</a>
