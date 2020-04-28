@@ -149,37 +149,4 @@ public class ImageController {
     private String convertUploadedFileToBase64(MultipartFile file) throws IOException {
         return Base64.getEncoder().encodeToString(file.getBytes());
     }
-
-    //findOrCreateTags() method has been implemented, which returns the list of tags after converting the ‘tags’ string to a list of all the tags and also stores the tags in the database if they do not exist in the database. Observe the method and complete the code where required for this method.
-    //Try to get the tag from the database using getTagByName() method. If tag is returned, you need not to store that tag in the database, and if null is returned, you need to first store that tag in the database and then the tag is added to a list
-    //After adding all tags to a list, the list is returned
-//    private List<Tag> findOrCreateTags(String tagNames) {
-//        StringTokenizer st = new StringTokenizer(tagNames, ",");
-//        List<Tag> tags = new ArrayList<Tag>();
-//
-//        while (st.hasMoreTokens()) {
-//            String tagName = st.nextToken().trim();
-//            Tag tag = tagService.getTagByName(tagName);
-//
-//            if (tag == null) {
-//                Tag newTag = new Tag(tagName);
-//                tag = tagService.createTag(newTag);
-//            }
-//            tags.add(tag);
-//        }
-//        return tags;
-//    }
-//
-//    private String convertTagsToString(List<Tag> tags) {
-//        StringBuilder tagString = new StringBuilder();
-//
-//        for (int i = 0; i <= tags.size() - 2; i++) {
-//            tagString.append(tags.get(i).getName()).append(",");
-//        }
-//
-//        Tag lastTag = tags.get(tags.size() - 1);
-//        tagString.append(lastTag.getName());
-//
-//        return tagString.toString();
-//    }
 }
