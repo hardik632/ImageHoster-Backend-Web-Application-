@@ -24,7 +24,8 @@ public class UserService {
     //Calls the checkUser() method in the Repository passing the username and password which checks the username and password in the database
     //The Repository returns User type object if user with entered username and password exists in the database
     //Else returns null
-    public User login(User user) {
+    public User login(User user)
+    {
         User existingUser = userRepository.checkUser(user.getUsername(), user.getPassword());
         if(existingUser==null)
         {

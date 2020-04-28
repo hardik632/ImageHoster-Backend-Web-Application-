@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ImageService {
+public class ImageService
+{
     @Autowired
     private ImageRepository imageRepository;
 
     //Call the getAllImages() method in the Repository and obtain a List of all the images in the database
     public List<Image> getAllImages()
+
     {
         return imageRepository.getAllImages();
     }

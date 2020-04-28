@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 @Repository
 public class TagRepository {
+
     @PersistenceUnit(unitName = "imageHoster")
     private EntityManagerFactory emf;
 

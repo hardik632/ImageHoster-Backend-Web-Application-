@@ -27,6 +27,7 @@ public class Image {
     // Text is a Postgres specific column type that allows you to save
     // text based data that will be longer than 256 characters
     // this is a base64 encoded version of the image
+
     @Column(columnDefinition = "TEXT")
     private String imageFile;
 
@@ -40,28 +41,36 @@ public class Image {
     //The 'images' table is mapped to 'users' table with Many:One mapping
     //One image can have only one user (owner) but one user can have multiple images
     //FetchType is EAGER
+
     @ManyToOne(fetch = FetchType.EAGER)
+
     //Below annotation indicates that the name of the column in 'images' table referring the primary key in 'users' table will be 'user_id'
+
     @JoinColumn(name = "user_id")
     private User user;
 
     //The attribute contains a list of all the tags of an image
     //Note that no column will be generated for this attribute in the database instead a new table will be created
     //Since the mapping is Many to Many, a new table will be generated containing the two columns both referencing to the primary key of both the tables ('images', 'tags')
+
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Tag> tags = new ArrayList<>();
 
-    public Image() {
+    public Image()
+    {
+
     }
 
-    public Image(int i, String s, String s1, Date date) {
+    public Image(int i, String s, String s1, Date date)
+    {
         this.id = i;
         this.title = s;
         this.imageFile = s1;
         this.date = date;
     }
 
-    public Image(int i, String s, String s1, String s2, Date date) {
+    public Image(int i, String s, String s1, String s2, Date date)
+    {
         this.id = i;
         this.title = s;
         this.imageFile = s1;
@@ -69,59 +78,73 @@ public class Image {
         this.date = date;
     }
 
-    public Integer getId() {
+    public Integer getId()
+    {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id)
+    {
         this.id = id;
     }
 
-    public String getTitle() {
+    public String getTitle()
+    {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title)
+    {
         this.title = title;
     }
 
-    public String getImageFile() {
+    public String getImageFile()
+    {
         return imageFile;
     }
 
-    public void setImageFile(String imageFile) {
+    public void setImageFile(String imageFile)
+    {
         this.imageFile = imageFile;
     }
 
-    public String getDescription() {
+    public String getDescription()
+    {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description)
+    {
         this.description = description;
     }
 
-    public Date getDate() {
+    public Date getDate()
+    {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Date date)
+    {
         this.date = date;
     }
 
-    public User getUser() {
+    public User getUser()
+    {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(User user)
+    {
         this.user = user;
     }
 
-    public List<Tag> getTags() {
+    public List<Tag> getTags()
+    {
         return tags;
     }
 
-    public void setTags(List<Tag> tags) {
+    public void setTags(List<Tag> tags)
+    {
         this.tags = tags;
     }
 }

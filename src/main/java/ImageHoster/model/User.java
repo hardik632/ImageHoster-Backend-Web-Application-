@@ -38,46 +38,57 @@ public class User {
     //The table (primary key) is referenced by the 'user' field in the 'images' table
     //cascade = CascadeType.REMOVE specifies that if a record in 'users' table is deleted, then all the records in 'images' table associated to that particular record in 'users' table will be deleted first and then the record in the 'users' table will be deleted
     //FetchType is LAZY
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<Image> images = new ArrayList<>();
 
-    public Integer getId() {
+    public Integer getId()
+    {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id)
+    {
         this.id = id;
     }
 
-    public String getUsername() {
+    public String getUsername()
+    {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(String username)
+    {
         this.username = username;
     }
 
-    public String getPassword() {
+    public String getPassword()
+    {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password)
+    {
         this.password = password;
     }
 
-    public UserProfile getProfile() {
+    public UserProfile getProfile()
+    {
         return profile;
     }
 
-    public void setProfile(UserProfile profile) {
+    public void setProfile(UserProfile profile)
+    {
         this.profile = profile;
     }
 
-    public List<Image> getImages() {
+    public List<Image> getImages()
+    {
         return images;
     }
 
-    public void setImages(List<Image> images) {
+    public void setImages(List<Image> images)
+    {
         this.images = images;
     }
 }

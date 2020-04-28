@@ -28,8 +28,10 @@ public class UserController {
     //This method declares User type and UserProfile type object
     //Sets the user profile with UserProfile type object
     //Adds User type object to a model and returns 'users/registration.html' file
+
     @RequestMapping("users/registration")
-    public String registration(Model model) {
+    public String registration(Model model)
+    {
         User user = new User();
         UserProfile profile = new UserProfile();
         user.setProfile(profile);
@@ -39,6 +41,7 @@ public class UserController {
 
     //This controller method is called when the request pattern is of type 'users/registration' and also the incoming request is of POST type
     //This method calls the business logic and after the user record is persisted in the database, directs to login page
+
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
     public String registerUser(User user)
     {
@@ -47,6 +50,7 @@ public class UserController {
     }
 
     //This controller method is called when the request pattern is of type 'users/login'
+
     @RequestMapping("users/login")
     public String login()
     {
@@ -57,6 +61,7 @@ public class UserController {
     //The return type of the business logic is changed to User type instead of boolean type. The login() method in the business logic checks whether the user with entered username and password exists in the database and returns the User type object if user with entered username and password exists in the database, else returns null
     //If user with entered username and password exists in the database, add the logged in user in the Http Session and direct to user homepage displaying all the images in the application
     //If user with entered username and password does not exist in the database, redirect to the same login page
+
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
     public String loginUser(User user, HttpSession session)
     {
@@ -70,7 +75,6 @@ public class UserController {
             session.setAttribute("loggeduser", existingUser);
             return "redirect:/images";
         }
-
     }
 
     //This controller method is called when the request pattern is of type 'users/logout' and also the incoming request is of POST type
@@ -78,8 +82,10 @@ public class UserController {
     //session is invalidated
     //All the images are fetched from the database and added to the model with 'images' as the key
     //'index.html' file is returned showing the landing page of the application and displaying all the images in the application
+
     @RequestMapping(value = "users/logout", method = RequestMethod.POST)
-    public String logout(Model model, HttpSession session) {
+    public String logout(Model model, HttpSession session)
+    {
         session.invalidate();
 
         List<Image> images = imageService.getAllImages();

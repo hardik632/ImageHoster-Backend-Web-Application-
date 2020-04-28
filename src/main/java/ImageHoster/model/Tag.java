@@ -27,37 +27,47 @@ public class Tag {
     //FetchType is LAZY
     //Note that no column will be generated for this attribute in the database instead a new table will be created
     //Since the mapping is Many to Many, a new table will be generated containing the two columns both referencing to the primary key of both the tables ('images', 'tags')
+
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "tags")
     private List<Image> images;
 
-    public Tag() {
+    public Tag()
+    {
+
     }
 
     public Tag(String tagName)
     {
         this.name = tagName;
     }
-    public Integer getId() {
+
+    public Integer getId()
+    {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id)
+    {
         this.id = id;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public List<Image> getImages() {
+    public List<Image> getImages()
+    {
         return images;
     }
 
-    public void setImages(List<Image> images) {
+    public void setImages(List<Image> images)
+    {
         this.images = images;
     }
 }

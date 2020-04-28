@@ -7,7 +7,8 @@ import javax.persistence.*;
 
 //The annotation is a special type of @Component annotation which describes that the class defines a data repository
 @Repository
-public class UserRepository {
+public class UserRepository
+{
     //Get an instance of EntityManagerFactory from persistence unit with name as 'imageHoster'
     @PersistenceUnit(unitName = "imageHoster")
     private EntityManagerFactory emf;
@@ -17,10 +18,11 @@ public class UserRepository {
     //Starts a transaction
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
-    public void registerUser(User newUser) {
+
+    public void registerUser(User newUser)
+    {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
-
         try
         {
             transaction.begin();
@@ -40,7 +42,9 @@ public class UserRepository {
     //Executes JPQL query to fetch the user from User class where username is equal to received username and password is equal to received password
     //Returns the fetched user
     //Returns null in case of NoResultException
-    public User checkUser(String username, String password) {
+
+    public User checkUser(String username, String password)
+    {
         try
         {
             EntityManager em = emf.createEntityManager();

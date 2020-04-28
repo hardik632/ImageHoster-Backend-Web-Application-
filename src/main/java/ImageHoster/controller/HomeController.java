@@ -22,5 +22,4 @@ public class HomeController {
         model.addAttribute("images", images);
         return "index";
     }
-
 }

@@ -20,16 +20,20 @@ public class ImageRepository {
     //Starts a transaction
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
+
     public Image uploadImage(Image newImage) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try {
+        try
+        {
             transaction.begin();
             em.persist(newImage);
             transaction.commit();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             transaction.rollback();
         }
         return newImage;
@@ -38,7 +42,9 @@ public class ImageRepository {
     //The method creates an instance of EntityManager
     //Executes JPQL query to fetch all the images from the database
     //Returns the list of all the images fetched from the database
-    public List<Image> getAllImages() {
+
+    public List<Image> getAllImages()
+    {
         EntityManager em = emf.createEntityManager();
         TypedQuery<Image> query = em.createQuery("SELECT i from Image i", Image.class);
         List<Image> resultList = query.getResultList();
@@ -50,12 +56,17 @@ public class ImageRepository {
     //Executes JPQL query to fetch the image from the database with corresponding title
     //Returns the image in case the image is found in the database
     //Returns null if no image is found in the database
-    public Image getImageByTitle(String title) {
+
+    public Image getImageByTitle(String title)
+    {
         EntityManager em = emf.createEntityManager();
-        try {
+        try
+        {
             TypedQuery<Image> typedQuery = em.createQuery("SELECT i from Image i where i.title =:title", Image.class).setParameter("title", title);
             return typedQuery.getSingleResult();
-        } catch (NoResultException nre) {
+        }
+        catch (NoResultException nre)
+        {
             return null;
         }
     }
@@ -63,7 +74,9 @@ public class ImageRepository {
     //The method creates an instance of EntityManager
     //Executes JPQL query to fetch the image from the database with corresponding id
     //Returns the image fetched from the database
-    public Image getImage(Integer imageId) {
+
+    public Image getImage(Integer imageId)
+    {
         EntityManager em = emf.createEntityManager();
         TypedQuery<Image> typedQuery = em.createQuery("SELECT i from Image i where i.id =:imageId", Image.class).setParameter("imageId", imageId);
         Image image = typedQuery.getSingleResult();
@@ -75,15 +88,20 @@ public class ImageRepository {
     //Starts a transaction
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
-    public void updateImage(Image updatedImage) {
+
+    public void updateImage(Image updatedImage)
+    {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try {
+        try
+        {
             transaction.begin();
             em.merge(updatedImage);
             transaction.commit();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             transaction.rollback();
         }
     }
@@ -96,16 +114,21 @@ public class ImageRepository {
     //If you use remove() method on the object which is not in persistent state, an exception is thrown
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
-    public void deleteImage(Integer imageId) {
+
+    public void deleteImage(Integer imageId)
+    {
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
 
-        try {
+        try
+        {
             transaction.begin();
             Image image = em.find(Image.class, imageId);
             em.remove(image);
             transaction.commit();
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             transaction.rollback();
         }
     }
