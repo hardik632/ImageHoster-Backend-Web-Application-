@@ -23,6 +23,7 @@
 
     <div>
         <label for="file">Edit File</label>
+        
         <input type="file" name="file" id="file"/>
     </div>
 
@@ -30,7 +31,9 @@
     <div>
 
        <label for="tags">Edit Tags</label>
+        
         <textarea type="text" name="tags" id="tags" th:text="${tags}"></textarea>
+        
         <p>Multiple tags are allowed. Please separate tags by "," such as labrador,dog,yellow </p>
 
     </div>
