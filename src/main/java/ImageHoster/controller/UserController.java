@@ -66,12 +66,14 @@ public class UserController {
     public String loginUser(User user, HttpSession session)
     {
         User existingUser = userService.login(user);
+        
         if (existingUser == null)
         {
             return "users/login";
         }
        else
         {
+           
             session.setAttribute("loggeduser", existingUser);
             return "redirect:/images";
         }
@@ -89,7 +91,9 @@ public class UserController {
         session.invalidate();
 
         List<Image> images = imageService.getAllImages();
+        
         model.addAttribute("images", images);
+        
         return "index";
     }
 }
