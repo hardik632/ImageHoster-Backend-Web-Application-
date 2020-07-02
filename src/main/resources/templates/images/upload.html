@@ -14,6 +14,7 @@
 <form method="post" th:action="@{/images/upload}" enctype="multipart/form-data">
 
     <div>Image Title:</div>
+    
     <div><input type="text" id="title" name="title"/></div>
 
     <div>Description:</div>
@@ -21,20 +22,26 @@
     <div><textarea rows="7" cols="100" name="description"></textarea></div>
     <div>
         <label for="file">Upload File</label>
+        
         <input type="file" name="file" id="file"/>
+        
     </div>
 
     <!-- This piece of code accepts the string of all the tags separated by a comma-->
   <div>
 
       <label for="tags">Tags</label>
+      
       <input type="text" name="tags" id="tags"/>
+      
       <p> Multiple tags are allowed. Please separate tags by "," such as labrador,dog,yellow </p>
 
   </div>
 
     <div>
+        
         <input type="submit" value="Submit"/>
+        
     </div>
 
 </form>
