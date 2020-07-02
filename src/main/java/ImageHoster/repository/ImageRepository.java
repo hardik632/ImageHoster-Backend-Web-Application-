@@ -21,7 +21,22 @@ public class ImageRepository {
     //The transaction is committed if it is successful
     //The transaction is rolled back in case of unsuccessful transaction
 
-    public Image uploadImage(Image newImage) {
+  
+
+    //The method creates an instance of EntityManager
+    //Executes JPQL query to fetch all the images from the database
+    //Returns the list of all the images fetched from the database
+
+    public List<Image> getAllImages()
+    {
+        EntityManager em = emf.createEntityManager();
+        TypedQuery<Image> query = em.createQuery("SELECT i from Image i", Image.class);
+        List<Image> resultList = query.getResultList();
+
+        return resultList;
+    }
+
+      public Image uploadImage(Image newImage) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
@@ -38,20 +53,6 @@ public class ImageRepository {
         }
         return newImage;
     }
-
-    //The method creates an instance of EntityManager
-    //Executes JPQL query to fetch all the images from the database
-    //Returns the list of all the images fetched from the database
-
-    public List<Image> getAllImages()
-    {
-        EntityManager em = emf.createEntityManager();
-        TypedQuery<Image> query = em.createQuery("SELECT i from Image i", Image.class);
-        List<Image> resultList = query.getResultList();
-
-        return resultList;
-    }
-
     //The method creates an instance of EntityManager
     //Executes JPQL query to fetch the image from the database with corresponding title
     //Returns the image in case the image is found in the database
